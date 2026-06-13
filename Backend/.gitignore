@@ -1,0 +1,21 @@
+# Dependencies — never upload these
+node_modules/
+
+# Environment variables — contains your passwords and secrets
+.env
+
+# Uploaded files — these are user data, not code
+uploads/profiles/*
+uploads/notes/*
+
+# Keep the folder structure but ignore contents
+!uploads/profiles/.gitkeep
+!uploads/notes/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

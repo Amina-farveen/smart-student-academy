@@ -1,0 +1,230 @@
+.manage-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-chip:hover {
+  background: var(--surface-3);
+  color: var(--text-primary);
+}
+
+.filter-chip--active {
+  background: rgba(245,158,11,0.12);
+  border-color: var(--amber-500);
+  color: var(--amber-400);
+}
+
+.day-group {
+  margin-bottom: 24px;
+}
+
+.day-group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.day-group-badge {
+  display: inline-flex;
+  padding: 4px 14px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.25);
+  color: var(--amber-400);
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.day-group-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Reuse from Timetable.css */
+.period-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: rgba(245,158,11,0.12);
+  color: var(--amber-400);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.time-chip {
+  display: inline-flex;
+  padding: 4px 10px;
+  background: var(--surface-3);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+/* Semester configuration card */
+.semester-config-card {
+  margin-bottom: 28px;
+  border-color: rgba(245, 158, 11, 0.2);
+  background: rgba(245, 158, 11, 0.03);
+}
+
+.config-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.config-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.config-card-sub {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.config-form {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Week preview */
+.week-preview-card {
+  margin-bottom: 24px;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.week-day-card {
+  background: var(--surface-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.week-day-card--today {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.week-day-card--holiday {
+  border-color: rgba(244, 63, 94, 0.25);
+  background: rgba(244, 63, 94, 0.04);
+  opacity: 0.75;
+}
+
+.week-day-card--weekend {
+  opacity: 0.4;
+}
+
+.wdc-name {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.week-day-card--today .wdc-name {
+  color: var(--amber-400);
+}
+
+.wdc-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.wdc-do {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 2px 0;
+}
+
+.wdc-status--holiday {
+  font-size: 0.7rem;
+  color: var(--rose-400);
+  font-weight: 600;
+}
+
+.wdc-status--weekend {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.wdc-count {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* Auto badge */
+.auto-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--emerald-400);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 4px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .week-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .week-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

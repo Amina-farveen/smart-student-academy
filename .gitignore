@@ -1,0 +1,29 @@
+# Dependencies in both folders
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Build output
+dist/
+build/
+
+# Uploaded user files
+uploads/profiles/*
+uploads/notes/*
+!uploads/profiles/.gitkeep
+!uploads/notes/.gitkeep
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
