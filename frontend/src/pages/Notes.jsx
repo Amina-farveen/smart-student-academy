@@ -176,7 +176,7 @@ const Notes = () => {
               </div>
               <div className="note-card-actions">
                 <a
-                  href={`http://localhost:5000${note.filePath}`}
+                  href={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'}${note.filePath}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-secondary btn-sm"

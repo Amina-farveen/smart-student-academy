@@ -73,11 +73,12 @@ const Profile = () => {
     }
   };
 
-  const getPhotoUrl = (path) => {
-    if (!path) return null;
-    if (path.startsWith('http')) return path;
-    return `http://localhost:5000${path}`;
-  };
+ const getPhotoUrl = (path) => {
+  if (!path) return null;
+  if (path.startsWith('http')) return path;
+  const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';
+  return `${baseUrl}${path}`;
+};
 
   const getInitials = (name) => {
     if (!name) return '?';
